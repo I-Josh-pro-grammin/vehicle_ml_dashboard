@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 def frequency_table(df):
     # Simple counts
-    manufacturer_counts = df['make'].value_counts().reset_index()
+    manufacturer_counts = df['manufacturer'].value_counts().reset_index()
     manufacturer_counts.columns = ['Manufacturer', 'Count']
     # Convert to HTML using the correct method name: .to_html()
     table_html = manufacturer_counts.to_html(
